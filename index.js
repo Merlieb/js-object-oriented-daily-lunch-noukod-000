@@ -6,9 +6,7 @@ let customerId = 0;
 let mealId = 0;
 let deliveryId = 0;
 
-//has many deliveries
-//has many customers, through deliveries
-//has many meals, through deliveries
+
 class Neighborhood {
   constructor(name) {
     this.name = name;
@@ -36,9 +34,6 @@ class Neighborhood {
   }
 }
 
-//belongs to a neighborhood
-//has many deliveries
-//has many meals, through deliveries
 class Customer {
   constructor(name, neighborhoodId) {
     this.name = name;
@@ -65,7 +60,6 @@ class Customer {
   }
 }
 
-//has many customers
 class Meal {
   constructor(title, price){
     this.title = title;
@@ -94,10 +88,7 @@ class Meal {
   }
 }
 
-//JOIN TABLE
-//belongs to meal
-//belongs to customer
-//belongs to neighborhood
+
 class Delivery {
   constructor(mealId, neighborhoodId, customerId) {
     this.mealId = mealId;
